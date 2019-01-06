@@ -4,7 +4,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=".bashrc .vimrc .bash_prompt .gitconfig .aliases .conkyrc"
+files=".keybindings.sh .make.sh .zshrc .zshrc.pre.oh-my-zsh"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
