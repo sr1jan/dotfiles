@@ -68,6 +68,7 @@ ENABLE_CORRECTION="true"
 plugins=(
   git
   zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,9 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="subl ~/.zshrc"
+alias zshconfig="subl ~/dotfiles/zshrc.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles="cd ~/dotfiles"
+alias keybindings="subl ~/dotfiles/keybindings.sh"
 
 # Custom cd
     c() {
@@ -110,7 +112,5 @@ alias dotfiles="cd ~/dotfiles"
 alias cd="c"
 
 # Sourcing keybindings from .keybindings.sh
-source ~/.keybindings.sh
+source ~/dotfiles/keybindings.sh
 
-# added by Anaconda3 installer
-export PATH="/home/sr1/anaconda3/bin:$PATH"
