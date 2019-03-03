@@ -40,3 +40,11 @@
     zle -N edit_and_run
 bindkey "^v" edit_and_run
 
+# open timetable pic
+    function timetable() {
+        BUFFER="ttable"
+        zle accept-line
+    }
+    zle -N up_widget
+    bindkey "^T" up_widget
+
