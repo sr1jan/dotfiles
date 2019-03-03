@@ -46,5 +46,5 @@ bindkey "^v" edit_and_run
         zle accept-line
     }
     zle -N up_widget
-    bindkey "^T" up_widget
+    bindkey "^t" up_widget
 
