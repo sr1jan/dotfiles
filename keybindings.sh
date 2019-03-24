@@ -40,7 +40,7 @@
     zle -N edit_and_run
 bindkey "^v" edit_and_run
 
-# open timetable pic (Alt+Shift+T)
+# open timetable pic (Alt+Shift+t)
     function timetable() {
         BUFFER="sxiv -f -z 150 ~/Pictures/Timetable.png"
         zle accept-line

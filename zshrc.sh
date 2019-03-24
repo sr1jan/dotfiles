@@ -4,20 +4,28 @@
 # added by Anaconda3 installer
 export PATH="/home/sr1/anaconda3/bin:$PATH"
 
+export PATH=$HOME/.local/bin:$PATH
+
+export PATH=$HOME/Repositories:$PATH
+
+export SUDO_ASKPASS="/usr/X11R6/bin/ssh-askpass"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sr1/.oh-my-zsh"
+
+# Terminal
+export TERMINAL="st"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
 # If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+# ZSH_THEME_RANDOM_CANDIDATES=("robbyrussell")
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -99,12 +107,22 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+
 alias zshconfig="subl ~/dotfiles/zshrc.sh"
+alias i3config="subl ~/.config/i3/config"
+alias stconfig="subl ~/Repositories/st/config.h"
+alias keybindings="subl ~/dotfiles/keybindings.sh"
+
+
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles="cd ~/dotfiles"
-alias keybindings="subl ~/dotfiles/keybindings.sh"
 alias cclip="xclip -se c <"
-alias ttable="sxiv -f -z 150 ~/Pictures/Timetable.png"
+alias ttable="sxiv -f -z 150 ~/Pictures/pngs/Timetable.png"
+alias lh="ls -d .?*"
+alias gc="git clone"
+alias yt="youtube-viewer"
+alias yd="youtube-dl"
+alias configs="cd ~/.config"
 
 # Custom cd
     c() {
@@ -115,4 +133,5 @@ alias cd="c"
 
 # Sourcing keybindings from .keybindings.sh
 source ~/dotfiles/keybindings.sh
+
 
