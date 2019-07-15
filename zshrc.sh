@@ -8,12 +8,29 @@ export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$HOME/Repositories:$PATH
 
+export PATH="$HOME/bin:$PATH"
+
 export SUDO_ASKPASS="/usr/X11R6/bin/ssh-askpass"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sr1/.oh-my-zsh"
 
 # Terminal
 export TERMINAL="st"
+
+# Editor
+export EDITOR="nvim"
+export RTV_EDITOR="nvim"
+
+# Go Lang
+export GOROOT="/usr/local/go"
+export GOPATH=$HOME/GOprojects
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# GCP Creds
+export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
+
+# betterlockscreen
+export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -77,6 +94,7 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,13 +134,20 @@ alias keybindings="subl ~/dotfiles/keybindings.sh"
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles="cd ~/dotfiles"
-alias cclip="xclip -se c <"
+alias cfile="xclip -se c <"
+alias cinput="xclip -sel clip"
 alias ttable="sxiv -f -z 150 ~/Pictures/pngs/Timetable.png"
 alias lh="ls -d .?*"
 alias gc="git clone"
-alias yt="youtube-viewer"
+alias ys="youtube-viewer"
 alias yd="youtube-dl"
-alias configs="cd ~/.config"
+alias conf="cd ~/.config"
+alias install="sudo apt-get install"
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
+alias purge="sudo apt-get purge"
+alias alength="mp3info -p '%m:%02s\n'"
+alias vlength="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
 
 # Custom cd
     c() {
@@ -134,4 +159,5 @@ alias cd="c"
 # Sourcing keybindings from .keybindings.sh
 source ~/dotfiles/keybindings.sh
 
-
+# setting alias for thefuck toolw
+eval $(thefuck --alias)
