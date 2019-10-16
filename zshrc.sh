@@ -26,11 +26,25 @@ export GOROOT="/usr/local/go"
 export GOPATH=$HOME/GOprojects
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# Firebase service account
+# export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/andriodAppDevelopment/functionCall/.faceattendance-253619-firebase-adminsdk-t0wed-8d732eca7d.json"
+
 # GCP Creds
 export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
 
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
+
+# React Native
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Andriod Studio
+export PATH=$PATH:$HOME/android-studio/bin
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -126,28 +140,30 @@ export LANG=en_US.UTF-8
 #
 # Example aliases
 
-alias zshconfig="subl ~/dotfiles/zshrc.sh"
-alias i3config="subl ~/.config/i3/config"
-alias stconfig="subl ~/Repositories/st/config.h"
-alias keybindings="subl ~/dotfiles/keybindings.sh"
+alias zshconfig="nvim ~/dotfiles/zshrc.sh"
+alias i3config="nvim ~/.config/i3/config"
+alias stconfig="nvim ~/Repositories/st/config.h"
+alias keybindings="nvim ~/dotfiles/keybindings.sh"
 
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias dotfiles="cd ~/dotfiles"
 alias cfile="xclip -se c <"
 alias cinput="xclip -sel clip"
-alias ttable="sxiv -f -z 150 ~/Pictures/pngs/Timetable.png"
+alias ttable="sxiv -f ~/Pictures/Timetable.png"
+alias course="zathura --mode fullscreen ~/PDF/CSengineering.pdf"
 alias lh="ls -d .?*"
 alias gc="git clone"
 alias ys="youtube-viewer"
 alias yd="youtube-dl"
 alias conf="cd ~/.config"
 alias install="sudo apt-get install"
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
+alias update="sudo apt-get update -y"
+alias upgrade="sudo apt-get upgrade -y"
 alias purge="sudo apt-get purge"
 alias alength="mp3info -p '%m:%02s\n'"
 alias vlength="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
+alias android="studio.sh &"
 
 # Custom cd
     c() {
@@ -161,3 +177,5 @@ source ~/dotfiles/keybindings.sh
 
 # setting alias for thefuck toolw
 eval $(thefuck --alias)
+
+setopt extended_glob
