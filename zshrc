@@ -45,6 +45,9 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Andriod Studio
 export PATH=$PATH:$HOME/android-studio/bin
 
+# Java
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -143,7 +146,7 @@ export LANG=en_US.UTF-8
 alias zshconfig="nvim ~/dotfiles/zshrc.sh"
 alias i3config="nvim ~/.config/i3/config"
 alias stconfig="nvim ~/Repositories/st/config.h"
-alias keybindings="nvim ~/dotfiles/keybindings.sh"
+alias keybindings="nvim ~/.keybindings.sh"
 
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -164,6 +167,7 @@ alias purge="sudo apt-get purge"
 alias alength="mp3info -p '%m:%02s\n'"
 alias vlength="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
 alias android="studio.sh &"
+alias topdf="libreoffice --headless --convert-to pdf "
 
 # Custom cd
     c() {
@@ -173,9 +177,31 @@ alias android="studio.sh &"
 alias cd="c"
 
 # Sourcing keybindings from .keybindings.sh
-source ~/dotfiles/keybindings.sh
+source ~/.keybindings.sh
 
 # setting alias for thefuck toolw
 eval $(thefuck --alias)
 
 setopt extended_glob
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sr1/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sr1/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sr1/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sr1/google-cloud-sdk/completion.zsh.inc'; fi
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sr1/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sr1/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/sr1/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sr1/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
