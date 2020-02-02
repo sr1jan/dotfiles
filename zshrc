@@ -143,13 +143,14 @@ export LANG=en_US.UTF-8
 #
 # Example aliases
 
-alias zshconfig="nvim ~/dotfiles/zshrc.sh"
+alias zshconfig="nvim ~/.zshrc"
 alias i3config="nvim ~/.config/i3/config"
 alias stconfig="nvim ~/Repositories/st/config.h"
 alias keybindings="nvim ~/.keybindings.sh"
 
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias jn="jupyter-notebook"
 alias dotfiles="cd ~/dotfiles"
 alias cfile="xclip -se c <"
 alias cinput="xclip -sel clip"
