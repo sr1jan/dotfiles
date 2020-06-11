@@ -3,14 +3,12 @@
 
 # added by Anaconda3 installer
 export PATH="/home/sr1/anaconda3/bin:$PATH"
-
 export PATH=$HOME/.local/bin:$PATH
-
 export PATH=$HOME/Repositories:$PATH
-
 export PATH="$HOME/bin:$PATH"
 
 export SUDO_ASKPASS="/usr/X11R6/bin/ssh-askpass"
+
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sr1/.oh-my-zsh"
 
@@ -30,7 +28,10 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/andriodAppDevelopment/functionCall/.faceattendance-253619-firebase-adminsdk-t0wed-8d732eca7d.json"
 
 # GCP Creds
-export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
+
+# Firebase service account - cambridge
+export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depression-App/backend/.cammit-covid-19-firebase-adminsdk-hklss-4146480542.json"
 
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
@@ -48,6 +49,8 @@ export PATH=$PATH:$HOME/android-studio/bin
 # Java
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
+# Matlab run time
+export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:/usr/local/MATLAB/MATLAB_Runtime/v90/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/sys/os/glnxa64:"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -112,6 +115,8 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   vi-mode
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -140,42 +145,8 @@ export LANG=en_US.UTF-8
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 # Example aliases
-
-alias zshconfig="nvim ~/.zshrc"
-alias i3config="nvim ~/.config/i3/config"
-alias stconfig="nvim ~/Repositories/st/config.h"
-alias keybindings="nvim ~/.keybindings.sh"
-
-
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias jn="jupyter-notebook"
-alias dotfiles="cd ~/dotfiles"
-alias cfile="xclip -se c <"
-alias cinput="xclip -sel clip"
-alias ttable="sxiv -f ~/Pictures/Timetable.png"
-alias course="zathura --mode fullscreen ~/PDF/CSengineering.pdf"
-alias lh="ls -d .?*"
-alias gc="git clone"
-alias ys="youtube-viewer"
-alias yd="youtube-dl"
-alias conf="cd ~/.config"
-alias install="sudo apt-get install"
-alias update="sudo apt-get update -y"
-alias upgrade="sudo apt-get upgrade -y"
-alias purge="sudo apt-get purge"
-alias alength="mp3info -p '%m:%02s\n'"
-alias vlength="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
-alias android="studio.sh &"
-alias topdf="libreoffice --headless --convert-to pdf "
-
-# Custom cd
-    c() {
-        cd $1;
-        ls;
-    }
-alias cd="c"
+source ~/.zsh_alias
 
 # Sourcing keybindings from .keybindings.sh
 source ~/.keybindings.sh
@@ -206,3 +177,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# kubectl autocomplete
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)

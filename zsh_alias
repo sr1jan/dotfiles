@@ -1,0 +1,46 @@
+alias zshconfig="nvim ~/.zshrc"
+alias i3config="nvim ~/.config/i3/config"
+alias stconfig="nvim ~/Repositories/st/config.h"
+alias keybindings="nvim ~/.keybindings.sh"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+alias vi="nvim "
+alias vim="nvim "
+alias eng="zathura ~/PDF/CSengineering.pdf &"
+alias wifi="nmcli device wifi"
+alias rescan="nmcli device wifi rescan"
+alias connect="nmcli device wifi connect "
+alias py="python "
+alias cpp="g++ -o "
+alias jn="jupyter-notebook"
+alias dotfiles="cd ~/dotfiles"
+alias cfile="xclip -se c <"
+alias cinput="xclip -sel clip"
+alias ttable="sxiv -f ~/Pictures/Timetable.png"
+alias course="zathura --mode fullscreen ~/PDF/CSengineering.pdf"
+alias lh="ls -d .?*"
+alias gc="git clone"
+alias ys="youtube-viewer"
+alias yd="youtube-dl"
+alias conf="cd ~/.config"
+alias install="sudo apt-get install"
+alias update="sudo apt update -y"
+alias upgrade="sudo apt upgrade -y"
+alias purge="sudo apt-get purge"
+alias clean="sudo apt-get -y autoremove && sudo apt-get -y clean"
+alias vl="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
+alias android="studio.sh &"
+alias topdf="libreoffice --headless --convert-to pdf "
+
+# get audio duration
+    al() {
+        ffprobe -i $1 2>&1 | grep Duration | awk -F,  '{print $1}' | sed 's/\  //';
+    }
+
+# Custom cd
+    c() {
+        cd $1;
+        ls;
+    }
+alias cd="c"
+
+
