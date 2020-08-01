@@ -1,10 +1,10 @@
 !! Transparency (0-255):
-*.alpha: 195
+*.alpha: 140
 *.font: monospace:pixelsize=16:antialias=true:autohint=true;
 
 ! Black + DarkGrey
 *color0:  #000000
-*color8:  #555753
+*color8:  #808080	
 ! DarkRed + Red
 *color1:  #ff6565
 *color9:  #ff8d8d
@@ -15,7 +15,7 @@
 *color3:  #eab93d
 *color11: #ffc123
 ! DarkBlue + Blue
-*color4:  #204a87
+*color4:  #3792cb
 *color12: #3465a4
 ! DarkMagenta + Magenta
 *color5:  #ce5c00

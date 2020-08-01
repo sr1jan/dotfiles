@@ -31,7 +31,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
 
 # Firebase service account - cambridge
-export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depression-App/backend/.cammit-covid-19-firebase-adminsdk-hklss-4146480542.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depression-App/backend/.cammit-covid-19-firebase-adminsdk-hklss-4303a5d846.json"
 
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
@@ -51,6 +51,8 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 # Matlab run time
 export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:/usr/local/MATLAB/MATLAB_Runtime/v90/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/sys/os/glnxa64:"
+
+export DOCKERUSER="sr1jan"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -141,11 +143,8 @@ export LANG=en_US.UTF-8
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-# Example aliases
+# aliases
 source ~/.zsh_alias
 
 # Sourcing keybindings from .keybindings.sh

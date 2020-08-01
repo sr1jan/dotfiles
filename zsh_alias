@@ -1,11 +1,13 @@
 alias zshconfig="nvim ~/.zshrc"
+alias zshalias="nvim ~/.zsh_alias"
 alias i3config="nvim ~/.config/i3/config"
 alias stconfig="nvim ~/Repositories/st/config.h"
 alias keybindings="nvim ~/.keybindings.sh"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias bb="brave-browser "
 alias vi="nvim "
 alias vim="nvim "
-alias eng="zathura ~/PDF/CSengineering.pdf &"
+alias eng="zathura ~/PDF/TE_BE_CS.pdf &"
 alias wifi="nmcli device wifi"
 alias rescan="nmcli device wifi rescan"
 alias connect="nmcli device wifi connect "
@@ -15,8 +17,8 @@ alias jn="jupyter-notebook"
 alias dotfiles="cd ~/dotfiles"
 alias cfile="xclip -se c <"
 alias cinput="xclip -sel clip"
-alias ttable="sxiv -f ~/Pictures/Timetable.png"
 alias course="zathura --mode fullscreen ~/PDF/CSengineering.pdf"
+alias resume="zathura --mode fullscreen ~/PDF/Resume.pdf"
 alias lh="ls -d .?*"
 alias gc="git clone"
 alias ys="youtube-viewer"
@@ -28,6 +30,8 @@ alias upgrade="sudo apt upgrade -y"
 alias purge="sudo apt-get purge"
 alias clean="sudo apt-get -y autoremove && sudo apt-get -y clean"
 alias vl="ffprobe -show_entries format=duration -v quiet -of csv='p=0' -i"
+alias arecord="ffmpeg -f pulse -i default "
+alias srecord="ffmpeg -video_size 1366x768 -framerate 25 -f x11grab -i :0.0 "
 alias android="studio.sh &"
 alias topdf="libreoffice --headless --convert-to pdf "
 
@@ -35,6 +39,17 @@ alias topdf="libreoffice --headless --convert-to pdf "
     al() {
         ffprobe -i $1 2>&1 | grep Duration | awk -F,  '{print $1}' | sed 's/\  //';
     }
+
+# get crypto rates
+    rate() {
+      curl -s $1.rate.sx/$2;
+    }
+
+# get crypto ROI
+# roi() {
+#   curl -s $2.rate.sx/$3$1 | read val | echo $val"-"$4 | bc -l;
+#   unset val;
+# }
 
 # Custom cd
     c() {
