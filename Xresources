@@ -1,5 +1,5 @@
 !! Transparency (0-255):
-*.alpha: 140
+*.alpha: 138
 *.font: monospace:pixelsize=16:antialias=true:autohint=true;
 
 ! Black + DarkGrey

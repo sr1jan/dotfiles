@@ -43,6 +43,10 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# NDK
+export NDK_HOME=$ANDROID_HOME/ndk/android-ndk-r21d
+export PATH=$PATH:$NDK_HOME
+
 # Andriod Studio
 export PATH=$PATH:$HOME/android-studio/bin
 
