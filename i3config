@@ -230,11 +230,11 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
         position top
-
 }
 
 # window rules, you can find the window class using xprop
 assign [class=Firefox|Brave-browser] 1
+assign [class=Firefox|Brave-browser] output primary
 assign [class=St] 2
 assign [class=Thunar|Sublime_text|Code|octave-gui] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Zathura|jetbrains-studio|Tad|Sxiv] 4
