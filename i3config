@@ -90,12 +90,12 @@ bindsym $mod+c exec mate-calc &
 
 for_window [class="^.*"] border pixel 2
 
-gaps inner 2
-gaps outer 2
-gaps top 2
-gaps bottom 2
-gaps left 2
-gaps right 2
+gaps inner 1
+# gaps outer 10
+# gaps top 2
+# gaps bottom 2
+# gaps left 2
+# gaps right 2
 
 smart_gaps on
 smart_borders on
@@ -234,7 +234,6 @@ bar {
 
 # window rules, you can find the window class using xprop
 assign [class=Firefox|Brave-browser] 1
-assign [class=Firefox|Brave-browser] output primary
 assign [class=St] 2
 assign [class=Thunar|Sublime_text|Code|octave-gui] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Zathura|jetbrains-studio|Tad|Sxiv] 4

@@ -53,6 +53,9 @@ export PATH=$PATH:$HOME/android-studio/bin
 # Java
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
+# Gradle
+export GRADLE_USER_HOME="$HOME/.gradle"
+
 # Matlab run time
 export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:/usr/local/MATLAB/MATLAB_Runtime/v90/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/sys/os/glnxa64:"
 
