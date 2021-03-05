@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# compiler course
+PATH="/usr/class/bin:$PATH"
+
 # added by Anaconda3 installer
 export PATH="/home/sr1/anaconda3/bin:$PATH"
 export PATH=$HOME/.local/bin:$PATH
@@ -19,6 +22,10 @@ export TERMINAL="st"
 export EDITOR="nvim"
 export RTV_EDITOR="nvim"
 
+# Ruby Gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
+
 # Go Lang
 export GOROOT="/usr/local/go"
 export GOPATH=$HOME/GOprojects
@@ -36,7 +43,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depr
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-# React Native
+# React Native / Andriod
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
@@ -47,9 +54,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export NDK_HOME=$ANDROID_HOME/ndk/android-ndk-r21d
 export PATH=$PATH:$NDK_HOME
 
-# Andriod Studio
-export PATH=$PATH:$HOME/android-studio/bin
-
 # Java
 export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
@@ -57,7 +61,7 @@ export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 export GRADLE_USER_HOME="$HOME/.gradle"
 
 # Matlab run time
-export LD_LIBRARY_PATH="/usr/lib/x86_64-linux-gnu:/usr/local/MATLAB/MATLAB_Runtime/v90/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/sys/os/glnxa64:"
+export LD_LIBRARY_PATH="/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/gcc/x86_64-linux-gnu/7:/usr/local/MATLAB/MATLAB_Runtime/v90/runtime/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/bin/glnxa64:/usr/local/MATLAB/MATLAB_Runtime/v90/sys/os/glnxa64"
 
 export DOCKERUSER="sr1jan"
 
