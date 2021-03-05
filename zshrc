@@ -44,11 +44,20 @@ export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depr
 export PATH="${PATH}:${HOME}/.local/bin/"
 
 # React Native / Andriod
-export ANDROID_HOME=$HOME/Android/Sdk
+# export ANDROID_HOME=$HOME/Android/Sdk
+# export PATH=$PATH:$ANDROID_HOME/emulator
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/tools/bin
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Android SDK
+export ANDROID_HOME=$HOME/AndroidCLI/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools/
+export PATH=$PATH:$ANDROID_HOME/tools/bin/
+export PATH=$PATH:$ANDROID_HOME/tools/
+PATH=$ANDROID_HOME/emulator:$PATH
+
 
 # NDK
 export NDK_HOME=$ANDROID_HOME/ndk/android-ndk-r21d
