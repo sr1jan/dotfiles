@@ -60,7 +60,7 @@ PATH=$ANDROID_HOME/emulator:$PATH
 
 
 # NDK
-export NDK_HOME=$ANDROID_HOME/ndk/android-ndk-r21d
+export NDK_HOME=$ANDROID_HOME/ndk/21.3.6528147
 export PATH=$PATH:$NDK_HOME
 
 # Java

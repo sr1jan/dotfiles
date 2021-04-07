@@ -1,10 +1,10 @@
 !! Transparency (0-255):
 *.alpha: 138
-*.font: monospace:pixelsize=16:antialias=true:autohint=true;
+*.font: IBM Plex Mono:pixelsize=14:antialias=true:autohint=true;
 
 ! Black + DarkGrey
 *color0:  #000000
-*color8:  #808080	
+*color8:  #808080
 ! DarkRed + Red
 *color1:  #ff6565
 *color9:  #ff8d8d
@@ -46,4 +46,3 @@ dmenu.selforeground:	    #d8dee9
 dmenu.background:	        #2e3440
 dmenu.selbackground:	    #bf616a
 dmenu.foreground: #d8dee9
-
