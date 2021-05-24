@@ -51,6 +51,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Android SDK
+export ANDROID_SDK_ROOT=$HOME/AndroidCLI/Sdk
 export ANDROID_HOME=$HOME/AndroidCLI/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools/
@@ -60,6 +61,7 @@ PATH=$ANDROID_HOME/emulator:$PATH
 
 
 # NDK
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/21.3.6528147
 export NDK_HOME=$ANDROID_HOME/ndk/21.3.6528147
 export PATH=$PATH:$NDK_HOME
 
