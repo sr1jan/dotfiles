@@ -37,6 +37,7 @@ alias topdf="libreoffice --headless --convert-to pdf "
 alias dual="xrandr --output eDP-1 --auto --output DP-2 --left-of eDP-1 --mode '1366x768'"
 alias single="xrandr --output DP-2 --off"
 alias droidEM="~/scripts/run_android_emulator.sh"
+alias homeMem="sudo du -hSc | sort -hr | less"
 # alias android ="emulator @pixel_10 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 1080x1920 &"
 
 # zsh history grep
