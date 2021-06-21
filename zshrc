@@ -31,14 +31,8 @@ export GOROOT="/usr/local/go"
 export GOPATH=$HOME/GOprojects
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
-# Firebase service account
-# export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/andriodAppDevelopment/functionCall/.faceattendance-253619-firebase-adminsdk-t0wed-8d732eca7d.json"
-
 # GCP Creds
 # export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
-
-# Firebase service account - cambridge
-export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/cambridgeDepression/CamMIT_Depression-App/backend/.cammit-covid-19-firebase-adminsdk-hklss-4303a5d846.json"
 
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
