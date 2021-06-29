@@ -1,5 +1,5 @@
 !! Transparency (0-255):
-*.alpha: 138
+*.alpha: 170
 *.font: IBM Plex Mono:pixelsize=14:antialias=true:autohint=true;
 
 ! Black + DarkGrey
