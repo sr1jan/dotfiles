@@ -1,1 +1,1 @@
-set colorscheme gotham256
+colorscheme codedark
