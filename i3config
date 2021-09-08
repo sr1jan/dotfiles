@@ -74,12 +74,12 @@ exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 #autostart
 # exec --no-startup-id source ~/.fehbg
-exec --no-startup-id exec bash $HOME/.fehbg
-exec --no-startup-id compton -b
+exec_always --no-startup-id exec bash $HOME/.fehbg
+exec_always --no-startup-id compton -b
 # exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id $HOME/scripts/battery_status.sh
-exec --no-startup-id mpd
-exec --no_startup-id "guake"
+# exec --no-startup-id $HOME/scripts/battery_status.sh
+exec_always --no-startup-id mpd
+exec_always --no_startup-id "guake"
 
 
 # start dmenu (a program launcher)

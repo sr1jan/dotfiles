@@ -135,6 +135,7 @@ plugins=(
   vi-mode
   docker
   docker-compose
+  zsh-kubectl-prompt
 )
 
 source $ZSH/oh-my-zsh.sh
