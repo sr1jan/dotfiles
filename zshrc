@@ -18,6 +18,12 @@ export ZSH="/home/sr1/.oh-my-zsh"
 # Terminal
 export TERMINAL="st"
 
+# Solana
+export PATH="/home/sr1/.local/share/solana/install/active_release/bin:$PATH"
+
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Editor
 export EDITOR="nvim"
 export RTV_EDITOR="nvim"
