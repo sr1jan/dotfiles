@@ -162,7 +162,10 @@ let g:ale_typescript_prettier_use_local_config = 1
 
 let g:ale_linters = {
 \   'javascript': ['eslint', 'prettier'],
-\   'typescript': [ 'eslint', 'prettier','tsserver'],
+\   'js': ['eslint', 'prettier'],
+\   'ts': ['prettier', 'eslint'],
+\   'typescript': [ 'prettier', 'eslint'],
+\   'typescriptreact': [ 'prettier', 'eslint'],
 \   'python': ['flake8', 'pylint', 'mypy'],
 \   'go': ['go', 'golint', 'errcheck'],
 \   'yaml': ['prettier'],
@@ -174,9 +177,10 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': [ 'eslint','prettier'],
-\   'typescript': [ 'eslint', 'prettier'],
-\   'typescriptreact': [ 'eslint', 'prettier'],
+\   'javascript': [ 'prettier', 'eslint'],
+\   'js': [ 'prettier', 'eslint'],
+\   'typescript': [ 'prettier', 'eslint'],
+\   'typescriptreact': [ 'prettier', 'eslint'],
 \   'python': ['black', 'isort', 'yapf'],
 \   'yaml': ['prettier'],
 \   'json': ['prettier'],

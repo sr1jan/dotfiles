@@ -191,6 +191,11 @@ let s:default_registry = {
 \       'suggested_filetypes': ['ruby'],
 \       'description': 'Fix ruby files with standardrb --fix',
 \   },
+\   'statix': {
+\       'function': 'ale#fixers#statix#Fix',
+\       'suggested_filetypes': ['nix'],
+\       'description': 'Fix common Nix antipatterns with statix fix',
+\   },
 \   'stylelint': {
 \       'function': 'ale#fixers#stylelint#Fix',
 \       'suggested_filetypes': ['css', 'sass', 'scss', 'sugarss', 'stylus'],
@@ -245,6 +250,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#gofmt#Fix',
 \       'suggested_filetypes': ['go'],
 \       'description': 'Fix Go files with go fmt.',
+\   },
+\   'gofumpt': {
+\       'function': 'ale#fixers#gofumpt#Fix',
+\       'suggested_filetypes': ['go'],
+\       'description': 'Fix Go files with gofumpt, a stricter go fmt.',
 \   },
 \   'goimports': {
 \       'function': 'ale#fixers#goimports#Fix',
@@ -420,6 +430,11 @@ let s:default_registry = {
 \       'function': 'ale#fixers#terraform#Fix',
 \       'suggested_filetypes': ['hcl', 'terraform'],
 \       'description': 'Fix tf and hcl files with terraform fmt.',
+\   },
+\   'crystal': {
+\       'function': 'ale#fixers#crystal#Fix',
+\       'suggested_filetypes': ['cr'],
+\       'description': 'Fix cr (crystal).',
 \   },
 \   'ktlint': {
 \       'function': 'ale#fixers#ktlint#Fix',

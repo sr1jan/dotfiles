@@ -142,6 +142,7 @@ plugins=(
   docker
   docker-compose
   zsh-kubectl-prompt
+  colored-man-pages
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -208,3 +209,5 @@ export NVM_DIR="$HOME/.nvm"
 
 # aws auto-complete
 complete -C '/usr/local/bin/aws_completer' aws
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
