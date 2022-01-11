@@ -163,30 +163,31 @@ let g:ale_typescript_prettier_use_local_config = 1
 let g:ale_linters = {
 \   'javascript': ['eslint', 'prettier'],
 \   'js': ['eslint', 'prettier'],
-\   'ts': ['prettier', 'eslint'],
-\   'typescript': [ 'prettier', 'eslint'],
+\   'ts': [ 'prettier', 'eslint', 'tsserver'],
+\   'typescript': [ 'prettier', 'eslint', 'tsserver'],
 \   'typescriptreact': [ 'prettier', 'eslint'],
-\   'python': ['flake8', 'pylint', 'mypy'],
+\   'python': ['flake8', 'pylint', 'mypy', 'bandit'],
 \   'go': ['go', 'golint', 'errcheck'],
-\   'yaml': ['prettier'],
-\   'json': ['prettier'],
-\   'html': ['prettier'],
+\   'yaml': ['yamllint'],
+\   'json': ['eslint'],
+\   'html': ['writegood'],
 \   'css': ['prettier'],
-\   'markdown': ['prettier']
+\   'markdown': ['mdl', 'writegood']
 \}
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': [ 'prettier', 'eslint'],
 \   'js': [ 'prettier', 'eslint'],
-\   'typescript': [ 'prettier', 'eslint'],
+\   'ts': [ 'prettier', 'eslint', 'tsserver'],
+\   'typescript': [ 'prettier', 'eslint', 'tsserver'],
 \   'typescriptreact': [ 'prettier', 'eslint'],
 \   'python': ['black', 'isort', 'yapf'],
-\   'yaml': ['prettier'],
-\   'json': ['prettier'],
-\   'html': ['prettier'],
+\   'yaml': ['yamllint'],
+\   'json': ['eslint'],
+\   'html': ['writegood'],
 \   'css': ['prettier'],
-\   'markdown': ['prettier']
+\   'markdown': ['mdl', 'writegood']
 \}
 
 let g:ale_fix_on_save = 1
@@ -216,3 +217,11 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:vim_jsx_pretty_colorful_config = 1
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => deoplete
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use deoplete.
+let g:deoplete#enable_at_startup = 1
