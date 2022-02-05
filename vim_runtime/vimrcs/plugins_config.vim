@@ -179,15 +179,14 @@ let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': [ 'prettier', 'eslint'],
 \   'js': [ 'prettier', 'eslint'],
-\   'ts': [ 'prettier', 'eslint', 'tsserver'],
-\   'typescript': [ 'prettier', 'eslint', 'tsserver'],
+\   'ts': [ 'prettier', 'eslint'],
+\   'typescript': [ 'prettier', 'eslint'],
 \   'typescriptreact': [ 'prettier', 'eslint'],
 \   'python': ['black', 'isort', 'yapf'],
-\   'yaml': ['yamllint'],
+\   'yaml': ['prettier'],
 \   'json': ['eslint'],
 \   'html': ['writegood'],
 \   'css': ['prettier'],
-\   'markdown': ['mdl', 'writegood']
 \}
 
 let g:ale_fix_on_save = 1
@@ -202,7 +201,7 @@ let g:ale_set_highlights = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-let g:ale_python_flake8_options = '--max-line-length=88'
+let g:ale_python_flake8_options = '--max-line-length=119'
 
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 
@@ -218,10 +217,23 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 let g:vim_jsx_pretty_highlight_close_tag = 1
 let g:vim_jsx_pretty_colorful_config = 1
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => deoplete
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Use deoplete.
 let g:deoplete#enable_at_startup = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => git-blame
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" use git-blame
+let g:gitblame_enabled = 0
+
+let g:gitblame_message_template = '<summary> • <date> • <author> • <sha>'
+let g:gitblame_date_format = '%x %r'
+let g:gitblame_display_virtual_text = 1
+
+nnoremap <silent> <leader>b :GitBlameToggle<cr>
+nmap <M-o> :GitBlameOpenCommitURL<cr>

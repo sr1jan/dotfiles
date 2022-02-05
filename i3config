@@ -33,12 +33,12 @@ bindsym $mod+Shift+Insert  exec shutter --select
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 9
+# font pango:monospace 9
 
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -51,7 +51,7 @@ font pango:monospace 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id st
+bindsym $mod+Return exec st
 
 # start firefox
 bindsym $mod+f exec brave-browser
@@ -81,12 +81,10 @@ exec_always --no-startup-id compton -b
 exec_always --no-startup-id mpd
 exec_always --no_startup-id "guake"
 
-
 # start dmenu (a program launcher)
 bindsym $mod+Shift+d exec i3-dmenu-desktop --dmenu="dmenu -i -fn 'Noto Sans:size=8'"
 bindsym $mod+d exec rofi -lines 8 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Source Code Pro 10'
 bindsym $mod+c exec mate-calc &
-
 
 for_window [class="^.*"] border pixel 2
 
@@ -99,7 +97,6 @@ gaps inner 1
 
 smart_gaps on
 smart_borders on
-
 
 # change focus
 bindsym $mod+j focus left
@@ -239,11 +236,20 @@ assign [class=Thunar|Sublime_text|Code|octave-gui] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Zathura|jetbrains-studio|Tad|Sxiv|obsidian] 4
 assign [class=Audacity|mpv|Ghb|Xfburn|Gimp*|Inkscape|Steam|Skype|Signal|Telegram|discord|Slack] 5
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Transmission-gtk|Exo-helper*|Lxrandr|Arandr|TeamViewer|vlc|Shutter] 6
-for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|Pavucontrol|dda] floating enable
+for_window [class=Viewnior|feh|Audacious|File-roller|Lxappearance|Lxtask|dda] floating enable
 for_window [class=URxvt|Firefox|Geany|Evince|Soffice|libreoffice*|mpv|Ghb|Xfburn|Gimp*|Inkscape|Vlc|Lxappearance|Audacity|obsidian] focus
 for_window [class=Xfburn|GParted|System-config-printer.py|Lxtask|Pavucontrol|Exo-helper*|Lxrandr|Arandr|Sublime_text|St] focus
 for_window [class=Brave-browser] focus
 for_window [title="Android Emulator - pixel_10:5554"] floating enable
+for_window [title="^DevTools"] floating enable
+
+
+workspace $ws1 output DP-2
+workspace $ws2 output DP-2
+workspace $ws3 output primary
+workspace $ws4 output primary
+workspace $ws5 output primary
+workspace $ws6 output primary
 
 
 # Music (doesn't work)

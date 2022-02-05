@@ -1,6 +1,9 @@
 !! Transparency (0-255):
-*.alpha: 150
+*.alpha: 200
 *.font: IBM Plex Mono:pixelsize=14:antialias=true:autohint=true;
+
+!! HIDPI
+Xft.dpi: 96
 
 ! Black + DarkGrey
 *color0:  #000000

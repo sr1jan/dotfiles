@@ -195,6 +195,7 @@ else
         . "/home/sr1/anaconda3/etc/profile.d/conda.sh"
     else
         export PATH="/home/sr1/anaconda3/bin:$PATH"
+        export PATH="/home/sr1/anaconda3/envs:$PATH"
     fi
 fi
 unset __conda_setup
