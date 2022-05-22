@@ -182,10 +182,11 @@ let g:ale_fixers = {
 \   'ts': [ 'prettier', 'eslint'],
 \   'typescript': [ 'prettier', 'eslint'],
 \   'typescriptreact': [ 'prettier', 'eslint'],
-\   'python': ['black', 'isort', 'yapf'],
-\   'yaml': ['prettier'],
+\   'python': ['autopep8', 'black', 'isort', 'yapf'],
+\   'py': ['autopep8', 'black', 'isort', 'yapf'],
+\   'yaml': ['yamlfix','prettier'],
 \   'json': ['eslint'],
-\   'html': ['writegood'],
+\   'html': ['prettier'],
 \   'css': ['prettier'],
 \}
 
@@ -201,7 +202,7 @@ let g:ale_set_highlights = 1
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-let g:ale_python_flake8_options = '--max-line-length=119'
+let g:ale_python_flake8_options = '--max-line-length=120'
 
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
 

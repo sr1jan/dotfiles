@@ -245,11 +245,11 @@ for_window [title="^DevTools"] floating enable
 
 
 workspace $ws1 output DP-2
-workspace $ws2 output DP-2
+workspace $ws2 output primary
 workspace $ws3 output primary
 workspace $ws4 output primary
-workspace $ws5 output primary
-workspace $ws6 output primary
+workspace $ws5 output DP-2
+workspace $ws6 output DP-2
 
 
 # Music (doesn't work)

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # wallpaper directory
-wall_dir=/home/sr1/Pictures/Wallpapers
+wall_dir=/home/sr1/Pictures/assualt
 
-images=($(ls $wall_dir/*.jpg)) # array of images
+images=($(ls $wall_dir/*)) # array of images
 size=${#images[@]} # size of array
 select=$(($RANDOM % $size)) # random array index
 
