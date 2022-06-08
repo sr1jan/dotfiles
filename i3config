@@ -17,6 +17,7 @@ set $reboot reboot
 set $suspend ~/.local/bin/betterlockscreen -s dim
 set $logout pkill -u $USER
 set $lock ~/.local/bin/betterlockscreen -l dim
+set $toggle_touchpad ~/scripts/toggle_touchpad.sh
 
 
 bindsym $mod+Pause exec $lock
@@ -25,6 +26,7 @@ bindsym $mod+Shift+Pause exec $logout
 bindsym $mod+Delete exec $reboot
 bindsym $mod+Shift+Delete exec $shutdown
 
+bindsym $mod+Shift+t exec $toggle_touchpad
 
 bindsym $mod+Insert         exec shutter --full
 bindsym $mod+Shift+Insert  exec shutter --select
@@ -77,7 +79,7 @@ exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 exec_always --no-startup-id exec bash $HOME/.fehbg
 exec_always --no-startup-id compton -b
 # exec_always --no-startup-id ~/.config/polybar/launch.sh
-# exec --no-startup-id $HOME/scripts/battery_status.sh
+exec --no-startup-id $HOME/scripts/battery_status.sh
 exec_always --no-startup-id mpd
 exec_always --no_startup-id "guake"
 
