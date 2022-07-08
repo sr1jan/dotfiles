@@ -1,5 +1,5 @@
 !! Transparency (0-255):
-*.alpha: 220
+*.alpha: 255
 *.font: IBM Plex Mono:pixelsize=14:antialias=true:autohint=true;
 
 !! HIDPI
@@ -29,6 +29,7 @@ Xft.dpi: 96
 ! LightGrey + White
 *color7:  #ffffff
 *color15: #bbbbbb
+
 
 ! ------------------------------------------------------------------------------
 ! Rofi configs

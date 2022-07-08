@@ -42,6 +42,7 @@ alias setmx="tmux new -s default -n home \; new-window -n random \; new-window \
 alias gnode="NODE_PATH=$(npm root -g) node"
 alias gts-node="NODE_PATH=$(npm root -g) ts-node"
 alias dimages="docker images --format '{{.ID}}\t{{.Size}}\t{{.CreatedAt}}\t{{.Repository}}' | sort -k 2 -h"
+alias work="nvim ~/Documents/drepute/work.md"
 
 # alias android ="emulator @pixel_10 -no-boot-anim -netdelay none -no-snapshot -wipe-data -skin 1080x1920 &"
 

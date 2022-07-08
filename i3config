@@ -234,7 +234,7 @@ bar {
 # window rules, you can find the window class using xprop
 assign [class=Firefox|Brave-browser] 1
 assign [class=St] 2
-assign [class=Thunar|Sublime_text|Code|octave-gui] 3
+assign [class=Thunar|Sublime_text|Code|octave-gui|Mysql-workbench-bin] 3
 assign [class=Geany|Evince|Gucharmap|Soffice|libreoffice*|Zathura|jetbrains-studio|Tad|Sxiv|obsidian] 4
 assign [class=Audacity|mpv|Ghb|Xfburn|Gimp*|Inkscape|Steam|Skype|Signal|Telegram|discord|Slack] 5
 assign [class=Lxappearance|System-config-printer.py|Lxtask|GParted|Pavucontrol|Transmission-gtk|Exo-helper*|Lxrandr|Arandr|TeamViewer|vlc|Shutter|Blueman-manager] 6

@@ -17,6 +17,9 @@ export SUDO_ASKPASS="/usr/X11R6/bin/ssh-askpass"
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sr1/.oh-my-zsh"
 
+# AWS PROFILE
+export AWS_DEFAULT_PROFILE="default"
+
 # Terminal
 export TERMINAL="st"
 
@@ -214,3 +217,5 @@ export NVM_DIR="$HOME/.nvm"
 complete -C '/usr/local/bin/aws_completer' aws
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+export PATH="$PATH:/home/sr1/.foundry/bin"

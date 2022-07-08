@@ -1,5 +1,5 @@
 colorscheme PaperColor
-set background=dark
+set background=light
 
 " set cursorline
 " hi CursorLine term=bold cterm=bold guibg=Grey90
@@ -31,4 +31,5 @@ let g:lightline = {
 set shiftwidth=2
 set tabstop=2
 
+set foldmethod=syntax
 set nofoldenable
