@@ -1,0 +1,105 @@
+---
+# ./.tmuxinator.yml
+
+name: work
+root: ~/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Note that the pre and post options have been deprecated and will be replaced by
+# project hooks.
+
+# Project hooks
+
+# Runs on project start, always
+# on_project_start: command
+
+# Run on project start, the first time
+# on_project_first_start: command
+
+# Run on project start, after the first time
+# on_project_restart: command
+
+# Run on project exit ( detaching from tmux session )
+# on_project_exit: command
+
+# Run on project stop
+# on_project_stop: command
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: editor
+
+# Specifies (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+# startup_pane: 1
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+windows:
+  - home: ls
+  - scripts:
+      root: ~/Documents/rep3/scripts
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - infra[DB]:
+      root: ~/work/rep3/infra-management
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - docker ps -a && pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - infra[ssh]:
+      root: ~/work/rep3/infra-management
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - backend-v1:
+      root: ~/work/rep3/dao-tool-server
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3
+        - pyenv activate rep3
+  - backend-v2:
+      root: ~/work/rep3/rep3-backend-v2
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - relayer:
+      root: ~/work/rep3/rep3-relayer-service
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - sam:
+      root: ~/work/rep3/rep3-serverless
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2
+  - rep3:
+      root: ~/work/rep3
+      layout: event-horizontal
+      synchronize: after
+      panes:
+        - pyenv activate rep3-v2
+        - pyenv activate rep3-v2

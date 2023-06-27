@@ -81,14 +81,14 @@ augroup vim-go-buffer
   " on the FileType event.
 
   if go#util#has_job()
-    autocmd BufWritePost,FileChangedShellPost <buffer> call go#lsp#DidChange(expand('<afile>:p'))
-    autocmd BufDelete <buffer> call go#lsp#DidClose(expand('<afile>:p'))
+    autocmd BufWritePost,FileChangedShellPost <buffer> call go#lsp#DidChange(resolve(expand('<afile>:p')))
+    autocmd BufDelete <buffer> call go#lsp#DidClose(resolve(expand('<afile>:p')))
   endif
 
   " send the textDocument/didChange notification when idle. go#lsp#DidChange
   " will not send an event if the buffer hasn't changed since the last
   " notification.
-  autocmd CursorHold,CursorHoldI <buffer> call go#lsp#DidChange(expand('<afile>:p'))
+  autocmd CursorHold,CursorHoldI <buffer> call go#lsp#DidChange(resolve(expand('<afile>:p')))
 
   autocmd BufEnter,CursorHold <buffer> call go#auto#update_autocmd()
 
@@ -113,10 +113,10 @@ augroup vim-go-buffer
     " clear SameIds when the buffer is unloaded from its last window so that
     " loading another buffer (especially of a different filetype) in the same
     " window doesn't highlight the most recently matched identifier's positions.
-    autocmd BufWinLeave <buffer> call go#guru#ClearSameIds()
+    autocmd BufWinLeave <buffer> call go#sameids#ClearSameIds()
     " clear SameIds when a new buffer is loaded in the window so that the
     " previous buffer's highlighting isn't used.
-    autocmd BufWinEnter <buffer> call go#guru#ClearSameIds()
+    autocmd BufWinEnter <buffer> call go#sameids#ClearSameIds()
 
     " clear diagnostics when the buffer is unloaded from its last window so that
     " loading another buffer (especially of a different filetype) in the same

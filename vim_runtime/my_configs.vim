@@ -1,5 +1,7 @@
 colorscheme PaperColor
-set background=light
+set background=dark
+
+let g:ale_disable_lsp = 1
 
 " set cursorline
 " hi CursorLine term=bold cterm=bold guibg=Grey90
@@ -31,5 +33,17 @@ let g:lightline = {
 set shiftwidth=2
 set tabstop=2
 
-set foldmethod=syntax
 set nofoldenable
+
+" Use ALE and also some plugin 'foobar' as completion sources for all code.
+" call deoplete#custom#option('sources', {
+" \ '_': ['ale'],
+" \})
+
+set list=true
+set listchars=space:⋅,eol:↴
+
+require("indent_blankline").setup {
+    show_end_of_the_line = true,
+    space_char_blankline = " ",
+}

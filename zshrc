@@ -1,21 +1,51 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+# eval "$($HOME/anaconda3/bin/conda shell.zsh hook)"
+
 # compiler course
 PATH="/usr/class/bin:$PATH"
 
 # added by Anaconda3 installer
-export PATH="/home/sr1/anaconda3/bin:$PATH"
-export PATH="/home/sr1/anaconda3/envs:$PATH"
-export PATH="/home/sr1/.local/share/virtualenvs:$PATH"
+# export PATH="$HOME/anaconda3/bin:$PATH"  # commented out by conda initialize
+# export PATH="$HOME/anaconda3/envs:$PATH"
+export PATH="$HOME/.local/share/virtualenvs:$PATH"
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/Repositories:$PATH
 export PATH="$HOME/bin:$PATH"
 
+# sed error: https://stackoverflow.com/questions/19242275/re-error-illegal-byte-sequence-on-mac-os-x
+# export LC_CTYPE=C
+# export LANG=C
+
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# gpg tty
+export GPG_TTY=$(tty)
+
+# NODE_PATH
+export NODE_PATH="$HOME/.nvm/versions/node/v16.16.0/lib/node_modules"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+
+# rust (cargo)
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# solana
+export PATH="/Users/neodurden/.local/share/solana/install/active_release/bin:$PATH"
+
+# python3
+# export PATH="$HOME/Library/Python/3.8/bin:$PATH"
+
 export SUDO_ASKPASS="/usr/X11R6/bin/ssh-askpass"
 
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$PATH:$HOME/.foundry/bin"
+
 # Path to your oh-my-zsh installation.
-export ZSH="/home/sr1/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # AWS PROFILE
 export AWS_DEFAULT_PROFILE="default"
@@ -24,7 +54,7 @@ export AWS_DEFAULT_PROFILE="default"
 export TERMINAL="st"
 
 # Solana
-export PATH="/home/sr1/.local/share/solana/install/active_release/bin:$PATH"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -36,6 +66,7 @@ export RTV_EDITOR="nvim"
 # Ruby Gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Go Lang
 export GOROOT="/usr/local/go"
@@ -43,7 +74,7 @@ export GOPATH=$HOME/GOprojects
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # GCP Creds
-# export GOOGLE_APPLICATION_CREDENTIALS="/home/sr1/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
+# export GOOGLE_APPLICATION_CREDENTIALS="$HOME/videoAUTO/GCPtts/auto-tts-2ac7683af40f.json"
 
 # betterlockscreen
 export PATH="${PATH}:${HOME}/.local/bin/"
@@ -71,7 +102,9 @@ export NDK_HOME=$ANDROID_HOME/ndk/21.3.6528147
 export PATH=$PATH:$NDK_HOME
 
 # Java
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
 # Gradle
 export GRADLE_USER_HOME="$HOME/.gradle"
@@ -180,42 +213,45 @@ source ~/.zsh_alias
 source ~/.keybindings.sh
 
 # setting alias for thefuck toolw
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 setopt extended_glob
 
 # The next line updates PATH for the Google Cloud SDK.
-# if [ -f '/home/sr1/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sr1/google-cloud-sdk/path.zsh.inc'; fi
+# if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-# if [ -f '/home/sr1/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sr1/google-cloud-sdk/completion.zsh.inc'; fi
+# if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/sr1/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/sr1/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/sr1/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/sr1/anaconda3/bin:$PATH"
-        export PATH="/home/sr1/anaconda3/envs:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+#
 
 # kubectl autocomplete
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # aws auto-complete
 complete -C '/usr/local/bin/aws_completer' aws
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
-export PATH="$PATH:/home/sr1/.foundry/bin"
+# tmuxinator
+export TMUXINATOR_CONFIG="Users/neodurden/.config/tmuxinator"
+
+# openai
+export OPENAI_ACCESS_TOKEN="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"
+
+# pass
+export PASSWORD_STORE_CLIP_TIME=21600
+
+# For compilers to find libffi you may need to set:
+export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"
+
+# For pkg-config to find libffi you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig"
